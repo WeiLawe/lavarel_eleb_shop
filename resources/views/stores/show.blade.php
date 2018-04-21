@@ -8,9 +8,7 @@
             <dt>店铺图片</dt>
             <dd><img src="{{$store->store_info->store_img}}" alt="未上传" width="200"></dd>
             <dt>店铺所属分类</dt>
-
                 <dd>{{$store->store_cat->name}}</dd>
-
             <dt>店铺是否为品牌</dt>
             <dd>{{$store->store_info->brand==1?'是':'否'}}</dd>
             <dt>店铺是否准时达</dt>
@@ -37,9 +35,6 @@
             <dt></dt>
             <dd>
                 <a href="{{route('stores.edit',['store'=>$store])}}" class="btn btn-warning">修改店铺信息</a>
-                @if($store->status==0)
-                <a href="{{route('stores.change',['store'=>$store])}}" class="btn btn-warning">确定通过审核</a>
-                @endif
             </dd>
         </dl>
     @stop

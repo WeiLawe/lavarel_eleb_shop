@@ -2,10 +2,12 @@
 
 namespace App;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class Store extends Model
+class Store extends Authenticatable
 {
+
     /**
      * The attributes that are mass assignable.
      *
